@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import Navbar from './Components/NavBar/Navbar';
+import GlobalStyle from "./Styles/Global"
+import DescCourse from "./Components/DescCourse"
 
 function App() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Navbar navbarState={navbarOpen} handleNavbar={handleNavbar} />
+      <GlobalStyle/>
+      <DescCourse/>
+    </React.Fragment>
   );
 }
 
