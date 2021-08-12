@@ -18,6 +18,15 @@ a{
   margin-right: .5rem !important;
 }
 
+.btn-primary{
+  background-color: #FF5718 !important;
+  color: #ffff !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  border-radius: 7px;
+  font-weight: 700 !important;
+}
+
 .read-btn{
   background: rgba(28, 29, 32, 0.0686735) !important;
   border-radius: 20px !important;
