@@ -18,7 +18,7 @@ const kartu =[
 		image : kelas,
 		judul : "Strategi Menjadi Entrepreneur Pemula yang Kreatif dan..",
 		harga : 149000,
-		rating : 5,
+		rating : 4.5,
 		murid : 2500
 	},
 		{
@@ -32,7 +32,7 @@ const kartu =[
 		image : kelas,
 		judul : "Strategi Menjadi Entrepreneur Pemula yang Kreatif dan..",
 		harga : 149000,
-		rating : 5,
+		rating : 4.5,
 		murid : 2500
 	},
 ]
@@ -63,7 +63,7 @@ export default function Kelas(){
 					<Card style={{border: "0.5px solid rgba(28, 29, 32, 0.15)", boxShadow: "0px 6px 6px rgba(28, 29, 32, 0.04)", borderRadius: "1rem", overflow: "auto"}}>
 						<CardContent style={{overflow: "visible"}}>
 							<div style={{marginTop: "-3rem"}}>
-								<img src={item.image} width="100%" style={{ position: "relative"}} alt="kelas"/>
+								<img src={item.image} width="100%" style={{ position: "relative", bottom: 0}} alt="kelas"/>
 							</div>
 							<p style={{fontWeight: "700"}}>{item.judul}</p>
 							<Grid container >
