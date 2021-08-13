@@ -118,25 +118,25 @@ export default function Kurikulum(){
               <AccordionDetails>
               	<Grid container>
               		{item.link.map((item, index)=>(
-              		<>
-              		<Grid item lg={10} xs={10}>
-	                	<a href="/">
-	                  	<p style={{ margin: 0, color: "#0D78BF" }}>{item.title}</p>
-	                  </a>
-                  </Grid>
+              		<Grid container key={index}>
+                		<Grid item lg={10} xs={10} >
+  	                	<a href="/">
+  	                  	<p style={{ margin: 0, color: "#0D78BF" }}>{item.title}</p>
+  	                  </a>
+                    </Grid>
 
-                  <Grid item xs={2} lg={2}>
-                  	<Grid container>
-                  		<Grid item lg={3}>
-                  			<small><AccessTimeIcon/></small>
-                  		</Grid>
+                    <Grid item xs={2} lg={2}>
+                    	<Grid container>
+                    		<Grid item lg={3}>
+                    			<small><AccessTimeIcon/></small>
+                    		</Grid>
 
-                  		<Grid item lg={9}>
-                  		<p><span style={{textAlign: "right"}}>{item.time}</span></p>
-                  		</Grid>
-                  	</Grid>
+                    		<Grid item lg={9}>
+                    		<p><span style={{textAlign: "right"}}>{item.time}</span></p>
+                    		</Grid>
+                    	</Grid>
+                    </Grid>
                   </Grid>
-                  </>
                 	))}
                 </Grid>
               </AccordionDetails>

@@ -82,7 +82,7 @@ export default function Ulasan(){
 	    	<Grid container spacing={2}>
 	    		<Grid item lg={3} xs={12}>
 	    			<h1 style={{fontSize: "6rem", textAlign: "center"}}>4.5</h1>
-	    			<Grid container justify="center">
+	    			<Grid container justifyContent="center">
 		    			<Rating
 	              name='read-only'
 	              value={5}
@@ -95,7 +95,7 @@ export default function Ulasan(){
 	    		<Grid item lg={9} xs={12}>
 	    			{ulasan.map((item, index)=>(
 	    			<Grid container spacing={1} key={index}>
-	    				<Grid item lg={9} xs={9} key={index}>
+	    				<Grid item lg={9} xs={9}>
 	    					<BorderLinearProgress variant="determinate" value={item.value} />
 	    				</Grid>
 
@@ -116,7 +116,7 @@ export default function Ulasan(){
 	    		</Grid>
 	    	</Grid>
 	    	{review.map((item, index)=>(
-	    	<Grid container style={{marginTop: "3rem"}}>
+	    	<Grid container style={{marginTop: "3rem"}} key={index}>
 	    		<Grid item xs={12}>
 	    			<Rating
 	              name='read-only'

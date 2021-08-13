@@ -7,6 +7,7 @@ import Deskripsi from "./Deskripsi";
 import Ulasan from "./Ulasan";
 import Kurikulum from "./Kurikulum";
 import Harga from "./Harga";
+import Kelas from "./Kelas";
 
 
 function handleClick(event) {
@@ -88,7 +89,7 @@ export default function DescCourse(){
 		    		</Grid>
 
 		    		<Grid container style={{marginTop:"2rem"}}>
-		    				<iframe width="100%" height="400" src="https://www.youtube.com/embed/p-273wJCQOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		    				<iframe width="100%" height="400" src="https://www.youtube.com/embed/p-273wJCQOM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 		    		</Grid>
 
 		    		<Deskripsi/>
@@ -103,6 +104,12 @@ export default function DescCourse(){
 
 		    	<Grid item lg={4} xs={12}>
 		    		<Harga/>
+		    	</Grid>
+		    </Grid>
+
+		    <Grid container>
+		    	<Grid item xs={12}>
+		    		<Kelas/>
 		    	</Grid>
 		    </Grid>
 			</Container>

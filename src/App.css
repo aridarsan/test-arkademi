@@ -4,7 +4,7 @@
 
 a{
   text-decoration: none !important;
-  color: #0D78BF
+  color: #0D78BF;
 }
 
 .font{
@@ -21,8 +21,8 @@ a{
 .btn-primary{
   background-color: #FF5718 !important;
   color: #ffff !important;
-  padding: 1rem !important;
-  margin: 1rem 0 !important;
+  padding: 1rem 2rem !important;
+  margin-top: 1rem !important;
   border-radius: 7px;
   font-weight: 700 !important;
 }
@@ -31,7 +31,30 @@ a{
   background: rgba(28, 29, 32, 0.0686735) !important;
   border-radius: 20px !important;
   padding: 0 1rem  !important;
-  color: rgba(28, 29, 32, 0.896689);
+  color: rgba(28, 29, 32, 0.9);
+}
+
+.mitra{
+  padding: 1rem 0 !important;
+  border-radius: 7px !important;
+  border: 1px solid rgba(28, 29, 32, 0.03) !important;
+}
+
+.mitra:hover{
+  border: 0.736429px solid #0D78BF !important;
+}
+
+.medsos{
+  color: #ffff;
+}
+
+.icon-btn{
+  background: rgba(28, 29, 32, 0.3) !important;
+  margin: 0 .5rem !important;
+}
+
+.icon-btn:hover{
+  background: #0D78BF !important;
 }
 
 /*Mobile*/
@@ -85,23 +108,6 @@ a{
   .text_small {
     font-size: 0.8rem;
   }
-
-  .direksi{
-    text-align: left !important;
-    margin-top: 0 !important;
-  }
-  .overlay{
-    width: 87.5%;
-    overflow: hidden;
-  }
-  .img-produk{
-    width: 50% !important;
-    margin: 0 20% !important;
-  }
-
-  .img-profil{
-    margin-left: .8rem;
-  }
 }
 
 
@@ -152,10 +158,6 @@ a{
   small,
   .text_small {
     font-size: 0.8rem;
-  }
-
-  .img-profil{
-    margin-left: 20% !important;
   }
 }
 
@@ -208,9 +210,5 @@ a{
   small,
   .text_small {
     font-size: 0.8rem;
-  }
-
-  .img-profil{
-    margin-left: 1.25rem !important;
   }
 }
