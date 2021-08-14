@@ -2,13 +2,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
-import {NavLink} from "react-router-dom"
+import { NavLink } from 'react-router-dom';
 import Brand from './Brand';
 import Burgermenu from './Burgermenu';
 import CollapseMenu from './CollapseMenu';
-import basket from '../../Images/basket.svg'
-import {Button} from '@material-ui/core';
-import lup from "../../Images/loupe.svg"
+import basket from '../../Images/basket.svg';
+import { Button } from '@material-ui/core';
+import lup from '../../Images/loupe.svg';
 
 const NavBar = styled(animated.div)`
   // position: fixed;
@@ -17,7 +17,7 @@ const NavBar = styled(animated.div)`
   left: 0;
   z-index: 100;
   font-size: 1rem;
-  box-shadow: 0 0 40px rgb(0 0 0 / 10%);
+  // box-shadow: 0 0 40px rgb(0 0 0 / 10%);
 `;
 
 const FlexContainer = styled.div`
@@ -80,67 +80,110 @@ const Navbar = (props) => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
+          {/* Logo */}
           <Brand />
+
+          {/* Seatch bar */}
           <div>
-          <input
-            id='nama'
-            placeholder='Cari Kursus'
-            variant='outlined'
-            color='primary'
-            type="text"
-            style={{margin: "1rem 0", height:"3rem", width:"16rem", border: "3px solid rgba(81, 96, 140, 0.0992406)", borderRadius: "7px", padding:"1rem 3rem 1rem 1rem", fontFamily: "Montserrat", color: "rgba(28, 29, 32, 0.500437)"}}
-          />
-          <img src={lup} alt="lup" style={{position: "absolute", bottom: "35%", height: "1.5rem", justifyConten: "center", marginLeft: "-3rem", marginTop: "1rem"}}/>
+            <input
+              id='nama'
+              placeholder='Cari Kursus'
+              variant='outlined'
+              color='primary'
+              type='text'
+              style={{
+                margin: '1rem 0',
+                height: '3rem',
+                width: '16rem',
+                border: '3px solid rgba(81, 96, 140, 0.0992406)',
+                borderRadius: '7px',
+                padding: '1rem 3rem 1rem 1rem',
+                fontFamily: 'Montserrat',
+                color: 'rgba(28, 29, 32, 0.500437)',
+              }}
+            />
+            <img
+              src={lup}
+              alt='lup'
+              style={{
+                position: 'absolute',
+                bottom: '35%',
+                height: '1.5rem',
+                justifyConten: 'center',
+                marginLeft: '-3rem',
+                marginTop: '1rem',
+              }}
+            />
           </div>
+
+          {/* Navigation */}
           <NavLinks style={linkAnimation}>
-          <a href='/'></a>
-            <NavLink exact to='/' activeClassName="active">Kategori</NavLink>
-            <NavLink to='/' activeClassName="active">Mitra</NavLink>
-            <NavLink to='/' activeClassName="active">Tentang</NavLink>
-            <NavLink to='/' activeClassName="active">Blog</NavLink>
-            <NavLink to='/' activeClassName="active"><img src={basket} alt="basket"/></NavLink>
-            <span style={{borderLeft: "1px solid rgba(28, 29, 32, 0.105114)",  margin: "0 1.5rem 0 .5rem"}}></span>
-            <a href="/" style={{margin: 0}}>
+            <a href='/'></a>
+            <NavLink exact to='/' activeClassName='active'>
+              Kategori
+            </NavLink>
+            <NavLink to='/' activeClassName='active'>
+              Mitra
+            </NavLink>
+            <NavLink to='/' activeClassName='active'>
+              Tentang
+            </NavLink>
+            <NavLink to='/' activeClassName='active'>
+              Blog
+            </NavLink>
+            <NavLink to='/' activeClassName='active'>
+              <img src={basket} alt='basket' />
+            </NavLink>
+
+            <span
+              style={{
+                borderLeft: '1px solid rgba(28, 29, 32, 0.105114)',
+                margin: '0 1.5rem 0 .5rem',
+              }}
+            ></span>
+
+            {/* Button */}
+            <a href='/' style={{ margin: 0 }}>
               <Button
                 variant='outlined'
                 style={{
                   borderRadius: '7px',
-                  border: "0.5px solid rgba(28, 29, 32, 0.203589)",
-                  fontFamily: "Montserrat",
+                  border: '0.5px solid rgba(28, 29, 32, 0.203589)',
+                  fontFamily: 'Montserrat',
                   padding: '.5rem 2rem',
                   color: `rgba(28, 29, 32, 0.801546)`,
-                  boxShadow: "0px 5px 5px rgba(28, 29, 32, 0.0485686)",
-                  margin: "0 .5rem",
-                  textTransform: "capitalize"
+                  boxShadow: '0px 5px 5px rgba(28, 29, 32, 0.0485686)',
+                  margin: '0 .5rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 Masuk
               </Button>
             </a>
-            <a href="/" style={{margin: 0}}>
+            <a href='/' style={{ margin: 0 }}>
               <Button
                 variant='contained'
                 style={{
                   backgroundColor: '#0872C7',
                   borderRadius: '7px',
-                  fontFamily: "Montserrat",
+                  fontFamily: 'Montserrat',
                   color: '#ffff',
                   padding: '.5rem 2rem',
-                  margin: "0 .5rem",
-                  textTransform: "capitalize",
-                  boxShadow: "none"
+                  margin: '0 .5rem',
+                  textTransform: 'capitalize',
+                  boxShadow: 'none',
                 }}
               >
                 Daftar
               </Button>
-              </a>
+            </a>
           </NavLinks>
           <BurgerWrapper>
             <Burgermenu
               navbarState={props.navbarState}
               handleNavbar={props.handleNavbar}
             />
-          </BurgerWrapper> 
+          </BurgerWrapper>
         </FlexContainer>
       </NavBar>
       <CollapseMenu
